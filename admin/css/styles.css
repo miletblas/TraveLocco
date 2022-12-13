@@ -1,0 +1,94 @@
+/*.sidebar {
+    margin-top: 50px;
+    height: calc(100%);
+    z-index: 99;
+    left: 0;
+    width: 250px;
+    background-color: #c9efc7;
+
+}
+a.nav-item {
+    position: relative;
+    display: block;
+    padding: 1rem 3rem;
+    margin-bottom: -1px;
+    border: 1px solid rgba(0,0,0,.125);
+    background-color:  #c9efc7;
+    color: #528265;
+    font-weight: 600;
+}
+a.nav-item:hover, .nav-item.active {
+    background-color: #528265;
+    color: #fffafa;
+}
+main#view-panel{
+    min-height: 480px;
+    border: 1px black;
+    margin-left: 250px; 
+    width:calc(100% - 250px);
+    margin-top: 3.5rem;
+    padding: .5em
+}*/
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #c9efc7;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #c9efc7;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #528265;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+
+img{
+    width: 50px;
+    height: 50px;
+}
